@@ -13,13 +13,13 @@ import DeleteProduct from "./components/DeleteProduct";
 function App() {
 
   return (
-    <div className="App container bg-muted">
-      <div className="col-md-auto shadow-lg p-3 mb-5 bg-info text-light rounded">
+    <div className="App container bg-muted border border-dark bg-dark p-4">
+      <div className="col-md-auto shadow-lg p-3 mb-5 bg-primary text-light rounded">
             <h1>Product Manger</h1>
         </div>
       <nav>
-        <Link to="/"><button className="btn-lg btn-outline-info m-4 shadow-lg">Home</button></Link>
-        <Link to="/new"><button className="btn-lg btn-outline-info m-4 shadow-lg">Create Product</button></Link>
+        <Link to="/"><button className="btn-lg btn-outline-dark m-4 shadow-lg">Home</button></Link>
+        <Link to="/new"><button className="btn-lg btn-outline-dark m-4 shadow-lg">Create Product</button></Link>
       </nav>
       <Router>
         <AllProducts path="/" />

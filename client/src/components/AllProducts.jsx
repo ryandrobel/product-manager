@@ -25,7 +25,7 @@ const AllProducts = (props) => {
     }, []);
 
     return (
-        <div className="form-group m-4 p-4 rounded shado-lg">
+        <div className="form-group m-4 p-4 rounded shado-lg border border-dark">
             {products.map(x => <Product key={ x.id} product={ x } /> )}
         </div>
     );
