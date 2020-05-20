@@ -44,7 +44,7 @@ const DeleteProduct = (props) => {
 
 
     return (
-        <button className="btn-lg btn-dark m-4 p-4" onClick={deleteProduct}>Are you sure you want to Delete</button>
+        <button className="btn-lg btn-outline-danger dark m-4 p-4" onClick={deleteProduct}>Are you sure you want to Delete!?</button>
 
     );
 }

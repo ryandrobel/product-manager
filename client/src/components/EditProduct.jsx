@@ -60,23 +60,20 @@ const EditProduct = (props) => {
 
     return (
         
-            <div className="container bg-warning p-4">
+            <div className="container bg-light p-4 m-4">
                 
             
             <form className="m-4 p-4 bg-info rounded" onSubmit={updateExistingProduct}>
-
-                <lable>Title:</lable>
-                <input type="text" onChange={e => setTitle(e.target.value)} value={title}></input><br></br>
+            <lable className="text-light"><h4>Title</h4></lable>
+                <input className="form-control form-control-lg" type="text" onChange={e => setTitle(e.target.value)} value={title}></input>
                 {errors.title ? <p className="bg bg-info">{errors.title.message}</p> : ""}
+                <lable className="text-light"><h4>Price</h4></lable>
+                <input className="form-control form-control-lg" type="number" onChange={e => setPrice(e.target.value)} value={price}></input><br></br>{ errors.price ? <p className="bg bg-info">{errors.price.message}</p> : "" }
+                <lable className="text-light"><h4>Description</h4></lable>
+                <textarea className="form-control form-control-lg " type="text" onChange={e => setDescription(e.target.value)} value={description}></textarea><br></br>{errors.description ? <p className="bg bg-warning">{errors.description.message}</p> : "" }
 
-                <lable>Price:</lable>
-                <input type="number" onChange={e => setPrice(e.target.value)} value={price}></input><br></br>{ errors.price ? <p className="bg bg-info">{errors.price.message}</p> : "" }
-
-                <lable>Description:</lable><br></br>
-                <textarea type="text" onChange={e => setDescription(e.target.value)} value={description}></textarea><br></br>{errors.description ? <p className="bg bg-warning">{errors.description.message}</p> : "" }
-
-                <input className="btn btn-light m-4" type="submit" value="Edit"></input>
-                <button className="btn btn-dark m-4" onClick={buyProduct}>Delete</button>
+                <input className="btn btn-outline-light m-4" type="submit" value="Edit"></input>
+                <button className="btn btn-outline-light m-4" onClick={buyProduct}>Delete</button>
 
             </form>
             </div>

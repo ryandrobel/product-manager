@@ -12,14 +12,14 @@ import DeleteProduct from "./components/DeleteProduct";
 
 function App() {
 
-
-
   return (
-    <div className="App container bg-warning">
-      <h1>Product Manager</h1>
+    <div className="App container bg-muted">
+      <div className="col-md-auto shadow-lg p-3 mb-5 bg-info text-light rounded">
+            <h1>Product Manger</h1>
+        </div>
       <nav>
-        <Link to="/"><button className="btn-lg btn-info">Home</button></Link>
-        <Link to="/new"><button className="btn-lg btn-info">Create Product</button></Link>
+        <Link to="/"><button className="btn-lg btn-outline-info m-4 shadow-lg">Home</button></Link>
+        <Link to="/new"><button className="btn-lg btn-outline-info m-4 shadow-lg">Create Product</button></Link>
       </nav>
       <Router>
         <AllProducts path="/" />
